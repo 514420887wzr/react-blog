@@ -30,7 +30,10 @@ function FragmentManager(props) {
         title: '作者',
         dataIndex: 'author',
       },
-
+      {
+        title: '内容',
+        dataIndex: 'content',
+      },
       {
         title: '发布时间',
         dataIndex: 'createdAt',

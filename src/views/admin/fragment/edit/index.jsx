@@ -5,7 +5,7 @@ import axios from '@/utils/axios'
 import { PlusCircleFill, PlusCircleOutline } from 'utils/antdIcon'
 function FragmentEdit(props) {
   const [content, setContent] = useState('')
-  const [author, setAuthor] = useState('panyunyi')
+  const [author, setAuthor] = useState('蜡笔小开心❤️')
   const editId = parseInt(props.match.params.id)
   function fetchFragment(id) {
     axios.get(`/fragment/${id}`).then(res => {
@@ -42,7 +42,10 @@ function FragmentEdit(props) {
   }
   return (
     <div className='admin-edit-article'>
-      <MdEditor value={content} onChange={setContent} />
+      {
+        editId ? content ? <MdEditor value={content} onChange={setContent} /> : ''
+          : <MdEditor value={content} onChange={setContent} />
+      }
       <Button
         type='primary'
         shape='circle'

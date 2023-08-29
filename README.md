@@ -337,10 +337,10 @@ const config = {
   },
   DATABASE: {
     database: 'blogs',
-    user: 'wzr514420887',
-    password: 'QWEwzr123',
+    user: 'root',
+    password: 'root',
     options: {
-      host: 'rm-2zed0789nd9982v8m6o.mysql.rds.aliyuncs.com', // 连接的 host 地址
+      host: '127.0.0.1', // 连接的 host 地址
       dialect: 'mysql', // 连接到 mysql
       pool: {
         max: 5,
@@ -364,10 +364,10 @@ if (!devMode) {
   // ==== 配置数据库
   config.DATABASE = {
     database: 'blogs',
-    user: 'wzr514420887',
-    password: 'QWEwzr123',
+    user: 'root',
+    password: 'root',
     options: {
-      host: 'rm-2zed0789nd9982v8m6o.mysql.rds.aliyuncs.com', // 连接的 host 地址
+      host: '127.0.0.1', // 连接的 host 地址
       dialect: 'mysql', // 连接到 mysql
       pool: {
         max: 5,

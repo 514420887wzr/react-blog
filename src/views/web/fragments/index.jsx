@@ -72,7 +72,7 @@ function FragmentList(props) {
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
                   <div style={{display: 'flex', flexDirection: 'row'}}>
                     <Avatar style={{marginRight: '10px'}} src={'http://www.panyunyi.cn/static/media/avatar.7e58ba1b.jpeg'} />
-                    <p style={{margin: 'auto', fontSize: 13}}>种菜的小朋友</p>
+                    <p style={{margin: 'auto', fontSize: 13}}>蜡笔小开心❤️</p>
                   </div>
                   <div style={{display: 'flex', justifySelf: 'flex-end', alignSelf: 'flex-end', fontSize: 8}}>{dayjs(item.createdAt, 'YYYYMMDDHHmmss', 'zh-cn').format('YYYY-MM-DD HH:mm:ss') }</div>
                 </div>

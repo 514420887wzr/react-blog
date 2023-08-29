@@ -3,7 +3,7 @@ import { connect, useSelector } from 'react-redux'
 import './index.less'
 
 import axios from '@/utils/axios'
-import { Button, Input, Modal, BackTop, message, Switch} from 'antd'
+import { Button, Input, Modal, BackTop, message, Switch } from 'antd'
 import MdEditor from '@/components/MdEditor'
 import List from './Tag'
 import useBreadcrumb from '@/hooks/useBreadcrumb'
@@ -137,17 +137,18 @@ function Edit(props) {
           </span>
         </li>
 
-        <li style={{display: 'flex', flexDirection: 'row', justifyContent: 'left', alignItems: 'center'}}>
+        <li style={{ display: 'flex', flexDirection: 'row', justifyContent: 'left', alignItems: 'center' }}>
           <span className='label'>私密：</span>
           <Switch checkedChildren='公开' unCheckedChildren='私密' checked={type} onChange={setType} />
         </li>
-        <li style={{display: 'flex', flexDirection: 'row', justifyContent: 'left', alignItems: 'center'}}>
+        <li style={{ display: 'flex', flexDirection: 'row', justifyContent: 'left', alignItems: 'center' }}>
           <span className='label'>置顶：</span>
           <Switch checkedChildren='置顶' unCheckedChildren='普通' checked={top} onChange={setTop} />
         </li>
       </ul>
       {
-        content ? <MdEditor value={content} onChange={setContent} />:''
+        editId ? content ? <MdEditor value={content} onChange={setContent} /> : ''
+          : <MdEditor value={content} onChange={setContent} />
       }
       <Button
         type='primary'

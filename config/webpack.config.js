@@ -673,8 +673,8 @@ module.exports = function(webpackEnv) {
           }
         ]
       }),
-
-      isEnvProduction && new BundleAnalyzerPlugin(),
+      // 查看打包体积
+      // isEnvProduction && new BundleAnalyzerPlugin(),
       new webpack.DllReferencePlugin({
         manifest: path.resolve(__dirname, '../dll/manifest.json')
       }),

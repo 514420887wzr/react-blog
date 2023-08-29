@@ -62,11 +62,11 @@ export const ABOUT = {
 
 // 公告 announcement
 export const ANNOUNCEMENT = {
-  enable: false, // 是否开启
+  enable: true, // 是否开启
   content: (
     <>
       个人笔记网站，请访问
-      <Href href='https://www.yuque.com/zhongcaidexiaopengyou/kb'> panyunyi's note</Href>
+      <Href href='https://blog.csdn.net/wzr514420887'>蜡笔小开心❤️</Href>
     </>
-  )
+  ),
 }
