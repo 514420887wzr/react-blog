@@ -7,25 +7,28 @@ import "vditor/dist/index.css";
 import { translateMarkdown2html } from '@/utils'
 
 function MdEditor(props) {
+  console.log(`props`, props);
   const { value } = props;
+  const [vd, setVd] = useState();
   useEffect(() => {
     const vditor = new Vditor("vditor", {
-      value: value || " ",
+      value: props.value,
       after() {
-        vditor.setValue(value);
+        vditor.setValue(props.value);
+        setVd(vditor);
       },
       input: (value) => props.onChange(value),
       cache: { id: 'vditor' },
       height: '500px',
       counter: { enable: true },
       upload: {
-        url: 'http://127.0.0.1:6060/uploads/file',
+        url: 'http://39.106.132.8:6060/uploads/file',
         fieldName: 'file',
         extraData: { packet: 'blog' },
         format: (files, responseTxt) => {
           const res = JSON.parse(responseTxt);
           const name = files[0].name;
-          const url = res.data.url;
+          const url = 'http://39.106.132.8:6060/'+res.data.url;
           const result = JSON.stringify({ code: 0, data: { errFiles: '', succMap: { [name]: url } } });
           return result;
         },

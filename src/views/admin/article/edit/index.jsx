@@ -146,9 +146,9 @@ function Edit(props) {
           <Switch checkedChildren='置顶' unCheckedChildren='普通' checked={top} onChange={setTop} />
         </li>
       </ul>
-
-      <MdEditor value={content} onChange={setContent} />
-
+      {
+        content ? <MdEditor value={content} onChange={setContent} />:''
+      }
       <Button
         type='primary'
         shape='circle'

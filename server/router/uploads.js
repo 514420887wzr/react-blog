@@ -10,7 +10,7 @@ router.post('/file', async (ctx, next) => {
   ctx.body = {
     code: 200,
     data: {
-      url: 'http://127.0.0.1:6060/' + file.path.split('\\')[file.path.split('\\').length - 1],
+      url: file.path.split('\\')[file.path.split('\\').length - 1],
     },
   }
 })

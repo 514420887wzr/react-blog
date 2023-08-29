@@ -6,8 +6,8 @@ import Href from '@/components/Href'
 import MyInfo from '@/views/web/about/MyInfo'
 import {GithubFill} from 'utils/antdIcon'
 // API_BASE_URL
-export const SERVER_URL = 'http://127.0.0.1'
-// export const SERVER_URL = 'http://39.106.132.8'
+// export const SERVER_URL = 'http://127.0.0.1'
+export const SERVER_URL = 'http://39.106.132.8'
 export const API_BASE_URL = SERVER_URL + ':6060'
 // export const API_BASE_URL = 'http://127.0.0.1:6060'
 // project config
@@ -30,10 +30,10 @@ export const SIDEBAR = {
     },
   },
   friendslink: {
-    // lizi: {
-    //   link: 'http://blog.liziyang.space/',
-    //   img: 'http://blog.liziyang.space/images/pikachu.jpg',
-    // },
+    小伙伴博客: {
+      link: 'http://114.55.67.104',
+      img: 'http://114.55.67.104/favicon.ico',
+    },
     // wizchen: {
     //   link: 'http://blog.wizchen.com',
     //   img: 'https://cdn.jsdelivr.net/gh/wizcheu/content1@main/img/header.gif'
