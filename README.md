@@ -18,17 +18,20 @@ This ReadMe file contains the following:
 
 ## Table of Contents
 
-- [Background](#Background)
-- [Install](#Install)
-- [Usage](#Usage)
-- [Features and Personalized Configuration](#Features-and-Personal-Configuration)
-     - [Features](#Features)
-     - [Personalized Configuration](#Personalized-Configuration)
-     - [Personalized Information Configuration](#Personalized-Information-Configuration)
-     - [Background sensitive information configuration](#Background-sensitive-information-configuration)
-- [Maintainer](#Maintainer)
-- [Contributing](#Contributing)
-- [License](License)
+- [React Blog](#react-blog)
+  - [Table of Contents](#table-of-contents)
+  - [Background](#background)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Features and Personal Configuration](#features-and-personal-configuration)
+    - [Features](#features)
+    - [Personalized Configuration](#personalized-configuration)
+    - [Personalized Information Configuration](#personalized-information-configuration)
+    - [Background sensitive information configuration](#background-sensitive-information-configuration)
+  - [Maintainers](#maintainers)
+  - [Star History](#star-history)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## Background
 
@@ -113,75 +116,71 @@ Personalized configuration is configured through ```src/config.js```
 
 ```js
 import React from 'react'
-import { Icon } from 'antd'
+import {Icon} from 'antd'
 import SvgIcon from '@/components/SvgIcon'
 
 import Href from '@/components/Href'
 import MyInfo from '@/views/web/about/MyInfo'
 import {GithubFill} from 'utils/antdIcon'
 // API_BASE_URL
-export const API_BASE_URL = 'http://120.79.229.207:6060'
+// export const SERVER_URL = 'http://127.0.0.1'
+export const SERVER_URL = 'http://39.106.132.8'
+export const API_BASE_URL = SERVER_URL + ':6060'
 // export const API_BASE_URL = 'http://127.0.0.1:6060'
 // project config
-export const HEADER_BLOG_NAME = '菜园子' // header title 
+export const HEADER_BLOG_NAME = '菜园子' // header title 显示的名字
 
 // === sidebar
 export const SIDEBAR = {
-    avatar: require('@/assets/images/avatar.jpeg'), // sidebar image
-    title: '种菜的小朋友', // title
-    subTitle: 'Carpe diem', // subtitle
-    // personal website
-    homepages: {
+  avatar: require('@/assets/images/avatar.jpeg'), // 侧边栏头像
+  title: '蜡笔小开心❤️', // 标题
+  subTitle: 'Crayon Little Happy', // 子标题
+  // 个人主页
+  homepages: {
     github: {
-        link: 'https://github.com/faultaddr',
-        icon: <GithubFill className='homepage-icon' /> 
+      link: 'https://github.com/514420887wzr',
+      icon: <GithubFill className='homepage-icon' />,
     },
-    juejin: {
-        link: 'https://juejin.im/user/96412755827687',
-        icon: <SvgIcon type='iconjuejin' className='homepage-icon' />
-    }
-    },
-    //frindslink in sidebar
-    friendslink: {
-    lizi: {
-        link: 'http://blog.liziyang.co/',
-        img: 'http://blog.liziyang.co/images/pikachu.jpg',
-    },
-    wizchen: {
-        link: 'http://blog.wizchen.com',
-        img: 'https://cdn.jsdelivr.net/gh/wizcheu/content1@main/img/header.gif'
-    }
-    }
+  },
+  friendslink: {
+    // 友情链接
+    // lizi: {
+    //   link: 'http://xxx/',
+    //   img: 'http://xxx',
+    // },
+  },
 }
 
 // === discuss avatar
-export const DISCUSS_AVATAR = SIDEBAR.avatar // your default avatar in comment line
+export const DISCUSS_AVATAR = SIDEBAR.avatar // 评论框博主头像
+
 /**
  * github config
  */
 export const GITHUB = {
-    enable: true, // github 第三方授权开关
-    client_id: '87a4f88b943adaafd44a', // Setting > Developer setting > OAuth applications => client_id
-    url: 'https://github.com/login/oauth/authorize' // github auth page
+  enable: true, // github 第三方授权开关
+  client_id: 'b0090d8c2341f2c89ab0', // Setting > Developer setting > OAuth applications => client_id
+  url: 'https://github.com/login/oauth/authorize', // 跳转的登录的地址
 }
 
 export const ABOUT = {
-    avatar: SIDEBAR.avatar,
-    describe: SIDEBAR.subTitle,
-    discuss: true, // open the comment function on 'about me' page 
-    renderMyInfo: <MyInfo /> // 我的介绍 自定义组件 => src/views/web/about/MyInfo.jsx
+  avatar: SIDEBAR.avatar,
+  describe: SIDEBAR.subTitle,
+  discuss: true, // 关于页面是否开启讨论
+  renderMyInfo: <MyInfo /> // 我的介绍 自定义组件 => src/views/web/about/MyInfo.jsx
 }
 
 // 公告 announcement
 export const ANNOUNCEMENT = {
-    enable: true, // 是否开启
-    content: (
+  enable: false, // 是否开启
+  content: (
     <>
-        个人笔记网站，请访问
-        <Href href='https://www.yuque.com/zhongcaidexiaopengyou/kb'> panyunyi's note</Href>
+      {/* 个人笔记网站，请访问
+      <Href href='https://www.yuque.com/zhongcaidexiaopengyou/kb'> panyunyi's note</Href> */}
     </>
-    )
+  )
 }
+
 ```
 ### Personalized Information Configuration
 
@@ -190,63 +189,79 @@ Personal information is configured through ```src/view/web/about/index.jsx```
 import React from 'react'
 
 // components
-import { Divider, Rate, Icon, Avatar } from 'antd'
+import { Divider, Rate, Avatar } from 'antd'
 import Href from '@/components/Href'
 import SvgIcon from '@/components/SvgIcon'
-// rate is the star
-// label is your skills
+import { QqOutline } from 'utils/antdIcon'
+
 const skills = [
   {
-    label: '具备扎实的Java功底，熟练了解各种特性',
-    rate: '5'
-  },
-  {
-    label: '具备扎实的Python功底，熟练了解各类特性',
-    rate: '5'
-  },
-  {
-    label: '具备扎实的 Javascript 基础，熟练使用 ES6+ 语法。',
-    rate: 4
-  },
-  {
-    label: '具备不那么扎实的 C++ 基础，没熟练了解各类特性',
-    rate: 3
-  },
-  {
-    label: 'Android 顶级玩家',
+    label: '熟练掌握 HTML5，CSS/CSS3，JavaScript ，ES6 语法',
     rate: 5
   },
   {
-    label: '熟悉 React 并理解其原理，熟悉 Vue 框架及其用法。',
+    label: '熟练掌握 Vue 全家桶（vue.js、vue-cli、vuex、vue router）',
     rate: 5
   },
   {
-    label: '熟悉 Flask/Django 并理解其原理，熟悉各类用法。',
+    label: '熟练使用 Element UI，Element Plus，Vant，Ant Design，Ant Design Mobile 等前端 UI 组件库',
     rate: 5
   },
   {
-    label: 'Spring 全家桶爱好者，后端中级开发者,netty/kafka/hadoop/Storm/Spark',
-    rate: '3'
+    label: '熟练使用 sass，less 预处理器执行编译 css',
+    rate: 5
   },
   {
-    label: '3D 轻量级玩家，openGL小菜,3D shape segmentation & 3D scene segmentation',
-    rate: '3'
+    label: '熟练使用 sourcetree、git 版本控制工具进行代码管理，快速解决代码冲突，远程合并分支',
+    rate: 5
   },
   {
-    label: '熟练使用 Webpack 打包工具，熟悉常用工程化和模块化方案。',
+    label: '熟悉 npm、cnpm、pnpm、yarn 包管理工具',
+    rate: 5
+  },
+  {
+    label: '熟悉 TypeScript 的特性，可使用 TypeScript 进行开发',
+    rate: 5
+  },
+  {
+    label: '熟悉 echarts 可视化工具、百度地图、高德地图',
+    rate: 5
+  },
+  {
+    label: '熟练微信小程序开发，以及 uniapp 开发',
+    rate: 5
+  },
+  {
+    label: '熟悉 Node.js、Python 后端语言，以及 Mysql、MongoDB 数据库，可独立进行开发',
     rate: 4
   },
   {
     label: '熟悉 Koa、Mysql，针对需求可以做到简单的数据库设计、接口的开发与设计！',
-    rate: 3
-  },
-  {
-    label: '熟悉 HTTP 协议，缓存、性能优化、安全等，了解浏览器原理。',
     rate: 4
   },
   {
-    label: '熟悉常用的算法与数据结构',
+    label: '深入了解组件化开发，可进行二次开发组件',
+    rate: 5
+  },
+  {
+    label: '熟悉 Webpack、vite 等自动化工具',
+    rate: 5
+  },
+  {
+    label: '了解代码打包上传服务器、使用Apache工具、服务器优化等一系列操作',
     rate: 3
+  },
+  {
+    label: '熟练使用Artplayer.js完成视频广告开发',
+    rate: 5
+  },
+  {
+    label: '熟悉使用lodash对array、object 和 string等数据处理',
+    rate: 4
+  },
+  {
+    label: '了解WebSocket、WebRtc工作流程，可进行开发',
+    rate: 5
   }
 ]
 
@@ -257,24 +272,18 @@ const MyInfo = () => {
       <Divider orientation='center'>关于我</Divider>
 
       <ul className='about-list'>
-        <li>Name：潘云逸</li>
-        <li>Bachelor： 中央财经大学（CUFE）CS</li>
-        <li>Master： 南京大学（NJU）CS</li>
+        <li>姓名：王子润</li>
+        <li>本科： 三亚学院（信息与智能工程学院）</li>
         <li>
-          Contact me：
-          <Icon type='qq' /> 779087031
+          联系方式：
+          <QqOutline /> 514420887
           <Divider type='vertical' />
           <SvgIcon type='iconemail' style={{ marginRight: 5, transform: 'translateY(2px)' }} />
-          <a href='mailto:cuferpan@gmail.com'>cuferpan@gmail.com</a>
+          <a href='mailto:514420887@qq.com'>514420887@qq.com</a>
         </li>
-        <li>Work Base：ShangHai</li>
+        <li>工作地：上海</li>
         <li>
-          friends link：
-          <Href href='http://blog.liziyang.co/'>栗子栗子</Href>
-          <Divider type='vertical' />
-        </li>
-        <li>
-          skills
+          技能
           <ul>
             {skills.map((item, i) => (
               <li key={i}>
@@ -284,29 +293,13 @@ const MyInfo = () => {
             ))}
           </ul>
         </li>
-        <li>
-          others
-          <ul>
-            <li>常用开发工具： idea、pycharm、vim、vscode、webstorm、git</li>
-            <li>熟悉的 UI 框架： antd、element-ui</li>
-            <li>具备良好的编码风格和习惯，团队规范意识，乐于分享</li>
-          </ul>
-        </li>
-        <li>
-          publication
-          <ul>
-            <li>ICPR 2020: Two Stage Scene Segmentation Base on Self-attention Mechanism</li>
-            <li> 安徽大学学报： 图核综述 </li>
-            <li> 专利： 一种基于机器学习的CME事件跟踪方法 </li>
-            <li> 译著： 计算机视觉基础 </li>
-          </ul>
-        </li>
       </ul>
     </>
   )
 }
 
 export default MyInfo
+
 ```
 ### Background sensitive information configuration
 
@@ -316,44 +309,43 @@ Sensitive information in the background is configured through ``server\config\in
 ```js
 const devMode = process.env.NODE_ENV === 'development'
 const config = {
-  PORT: 6060, // start port
-  ADMIN_GITHUB_LOGIN_NAME: 'faultaddr', // your github name
+  PORT: 6060, // 启动端口
+  ADMIN_GITHUB_LOGIN_NAME: '514420887wzr', // 博主的 github 登录的账户名 user
   GITHUB: {
-    client_id: '87a4f88b943adaafd44a',
-    client_secret: '9494809fc485d93084452fbf8b21ba2a829bfb82',
+    client_id: 'b0090d8c2341f2c89ab0',
+    client_secret: '1083e4b3a75526fdde8e5512f7aee8877b842795',
     access_token_url: 'https://github.com/login/oauth/access_token',
     fetch_user_url: 'https://api.github.com/user', // 用于 oauth2
     fetch_user: 'https://api.github.com/user' // fetch user url https://api.github.com/users/gershonv
   },
   EMAIL_NOTICE: {
-    // mail notification
+    // 邮件通知服务
     // detail: https://nodemailer.com/
-    enable: true, // switcher
+    enable: true, // 开关
     transporterConfig: {
       host: 'smtp.qq.com',
       port: 465,
       secure: true, // true for 465, false for other ports
       auth: {
-        user: '779087031@qq.com', // generated ethereal user
-        pass: 'f2bbfe7cf1bcb8253a65c06701fbbbbf8c910be44ecc1a430497d4879db0d71d' // generated ethereal password 
+        user: '514420887@qq.com', // generated ethereal user
+        pass: 'pvyglnxelumtbhfh' // generated ethereal password 授权码 而非 密码
       }
     },
-    subject: 'panyunyi的博客 - 您的评论获得新的回复！', // subject for the notification mail
-    // main content of the mail
+    subject: '蜡笔小开心的博客 - 您的评论获得新的回复！', // 主题
     text: '您的评论获得新的回复！',
-    WEB_HOST: 'http://www.panyunyi.cn' // email callback url
+    WEB_HOST: 'http://www.wangzirun.xyz' // email callback url
   },
   TOKEN: {
     secret: 'root', // secret is very important!
-    expiresIn: '720h' // token exist time
+    expiresIn: '720h' // token 有效期
   },
   DATABASE: {
-    database: 'test',
-    user: 'root',
-    password: '123456Root!',
+    database: 'blogs',
+    user: 'wzr514420887',
+    password: 'QWEwzr123',
     options: {
-      host: 'localhost', //  host ip
-      dialect: 'mysql', // sql dilect
+      host: 'rm-2zed0789nd9982v8m6o.mysql.rds.aliyuncs.com', // 连接的 host 地址
+      dialect: 'mysql', // 连接到 mysql
       pool: {
         max: 5,
         min: 0,
@@ -361,44 +353,62 @@ const config = {
         idle: 10000
       },
       define: {
-        timestamps: false, // timestamps is set to 'off' default
-        freezeTableName: true // table name not add s in default
+        timestamps: false, // 默认不加时间戳
+        freezeTableName: true // 表名默认不加 s
       },
       timezone: '+08:00'
     }
   }
 }
 
-// production env configuration
+// 部署的环境变量设置
 if (!devMode) {
   console.log('env production....')
 
-  // ==== configure database
+  // ==== 配置数据库
   config.DATABASE = {
-    ...config.DATABASE,
-    database: '', // database name
-    user: '', // user name
-    password: '' // password
+    database: 'blogs',
+    user: 'wzr514420887',
+    password: 'QWEwzr123',
+    options: {
+      host: 'rm-2zed0789nd9982v8m6o.mysql.rds.aliyuncs.com', // 连接的 host 地址
+      dialect: 'mysql', // 连接到 mysql
+      pool: {
+        max: 5,
+        min: 0,
+        acquire: 30000,
+        idle: 10000
+      },
+      define: {
+        timestamps: false, // 默认不加时间戳
+        freezeTableName: true // 表名默认不加 s
+      },
+      timezone: '+08:00'
+    }
   }
 
-  // configure github auth
-  config.GITHUB.client_id = ''
-  config.GITHUB.client_secret = ''
+  // 配置 github 授权
+  config.GITHUB.client_id = 'b0090d8c2341f2c89ab0'
+  config.GITHUB.client_secret = '1083e4b3a75526fdde8e5512f7aee8877b842795'
 
-  // ==== configure token secret key
-  config.TOKEN.secret = ''
+  // ==== 配置 token 密钥
+  config.TOKEN = {
+    secret: 'root', // secret is very important!
+    expiresIn: '720h' // token 有效期
+  }
 
-  // ==== configure mailbox
+  // ==== 配置邮箱
 
   // config.EMAIL_NOTICE.enable = true
   config.EMAIL_NOTICE.transporterConfig.auth = {
-    user: '779087031@qq.com', // generated ethereal user
-    pass: 'f2bbfe7cf1bcb8253a65c06701fbbbbf8c910be44ecc1a430497d4879db0d71d' // generated ethereal password 
+    user: '514420887@qq.com', // generated ethereal user
+    pass: 'pvyglnxelumtbhfh' // generated ethereal password 授权码 而非 密码
   }
-  config.EMAIL_NOTICE.WEB_HOST = 'https://panyunyi.cn'
+  config.EMAIL_NOTICE.WEB_HOST = 'https://wangzirun.xyz'
 }
 
 module.exports = config
+
 
 ```
 

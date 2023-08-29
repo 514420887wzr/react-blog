@@ -24,10 +24,10 @@ export const SIDEBAR = {
       link: 'https://github.com/514420887wzr',
       icon: <GithubFill className='homepage-icon' />,
     },
-    // juejin: {
-    //   link: 'https://juejin.im/user/96412755827687',
-    //   icon: <SvgIcon type='iconjuejin' className='homepage-icon' />
-    // }
+    gitee: {
+      link: 'https://gitee.com/wzr514420887',
+      icon: <SvgIcon type='iconjuejin' className='homepage-icon' />,
+    },
   },
   friendslink: {
     // lizi: {
