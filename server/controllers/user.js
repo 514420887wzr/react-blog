@@ -43,7 +43,7 @@ async function getDateBetween(start, end) {
 async function getCommitCount(time) {
   //https://github.com/faultaddr?tab=overview&from=2021-09-01&to=2021-09-31
   //https://github.com/users/faultaddr/contributions?to=2021-12-31
-  const response = await axios.get(`https://github.com/users/514420887wzr/contributions?to=2021-12-31`)
+  const response = await axios.get(`https://github.com/users/514420887wzr/contributions?to=2023-12-31`)
   var parser = new DomParser();
   var doc = parser.parseFromString(response.data)
   var crArray = doc.getElementsByClassName('ContributionCalendar-day')
@@ -327,8 +327,6 @@ class UserController {
    */
   static async initGithubUser(githubLoginName) {
     try {
-      console.log(`走进逻辑`)
-      console.log(`githubLoginName:`, githubLoginName)
       const github = await getGithubInfo(githubLoginName)
       console.log(`github`, github)
       console.log(`走到330`)
