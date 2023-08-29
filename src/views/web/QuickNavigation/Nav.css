@@ -1,0 +1,124 @@
+@charset "UTF-8";
+.nav {
+  display: flex;
+  height: calc(100vh - 64px - 40px);
+  /* 修改滚动条的宽度和高度 */
+  /* 修改滚动条的形状 */
+  /* 修改滚动条轨道的形状 */
+}
+
+.nav .side {
+  width: 15%;
+  height: 100%;
+  background-color: #080808;
+  color: #f2f2f2;
+}
+
+.nav .side ul {
+  height: 100%;
+}
+
+.nav .side ul li {
+  height: 60px;
+  line-height: 60px;
+  cursor: pointer;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  font-size: 17px;
+  font-family: "宋体";
+  box-sizing: border-box;
+}
+
+.nav .side ul li .zi {
+  margin-left: 20px;
+}
+
+.nav .side ul li:hover {
+  background-color: #1c88cf;
+}
+
+.nav .side ul .nav-active {
+  background-color: #1c88cf;
+}
+
+.nav .main {
+  width: 85%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #5f479a;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+  color: #f2f2f2;
+}
+
+.nav .main .pub {
+  margin-bottom: 20px;
+}
+
+.nav .main .pub .title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.nav .main .pub .content ul {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav .main .pub .content ul li {
+  margin-right: 20px;
+  border: 1px solid #f2f2f2;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  background-color: #a59aca;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.nav .main .pub .content ul li img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.nav .main .pub .content ul li a {
+  color: #f2f2f2;
+  font-size: 15px;
+}
+
+.nav .main .pub .content ul li:hover {
+  position: relative;
+  top: -5px;
+}
+
+.nav .main .nav_move_pub {
+  animation: nav_move_pub 1s;
+}
+
+.nav .main::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+  background-color: #35393d;
+}
+
+.nav .main::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #8e5e10;
+}
+
+.nav .main::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+@keyframes nav_move_pub {
+  0% {
+    -webkit-transform: translateX(400px);
+    opacity: 0;
+  }
+}
