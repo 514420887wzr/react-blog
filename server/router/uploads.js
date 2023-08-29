@@ -10,7 +10,10 @@ router.post('/file', async (ctx, next) => {
   ctx.body = {
     code: 200,
     data: {
-      url: file.path.split('\\')[file.path.split('\\').length - 1],
+      // 服务器需改为：
+      url: file.path.split('/')[file.path.split('/').length - 1],
+      // 本地运行
+      // url: file.path.split('\\')[file.path.split('\\').length - 1],
     },
   }
 })
