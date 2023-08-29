@@ -5,49 +5,45 @@
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 
-For chinese , you can visit this [中文](https://github.com/faultaddr/react-blog/blob/main/README.zh-CN.md)
 
-One-click installation & deployment of the React blog, freeing your hands so that you only need to change the configuration file to have a perfect personal technical blog!
-
-This ReadMe file contains the following:
-
-1. How to install and deploy a blog
-2. How to configure front-end page information
-3. How to configure sensitive back-end information
+一键式安装部署React博客，解放你的双手，只需要修改配置文件就可以拥有一个完美的个人技术博客!!
 
 
-## Table of Contents
+这个自述文件包含以下内容:
+1. 如何安装和部署博客
+2. 如何配置前端页面信息
+3. 如何配置敏感后端信息
+
+
+## 目录
 
 - [React Blog](#react-blog)
-  - [Table of Contents](#table-of-contents)
-  - [Background](#background)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Features and Personal Configuration](#features-and-personal-configuration)
-    - [Features](#features)
-    - [Personalized Configuration](#personalized-configuration)
-    - [Personalized Information Configuration](#personalized-information-configuration)
-    - [Background sensitive information configuration](#background-sensitive-information-configuration)
-  - [Maintainers](#maintainers)
-  - [Star History](#star-history)
-  - [Contributing](#contributing)
-  - [License](#license)
+  - [目录](#目录)
+  - [背景](#背景)
+  - [安装](#安装)
+  - [使用](#使用)
+  - [功能和个人配置](#功能和个人配置)
+    - [特性](#特性)
+    - [个性化配置](#个性化配置)
+    - [个性化信息配置](#个性化信息配置)
+    - [后台敏感信息配置](#后台敏感信息配置)
+  - [维护人员](#维护人员)
 
-## Background
+## 背景
 
-`React Blog` was originally built on the basis of project [alvin0216/react-blog](https://github.com/alvin0216/react-blog) which was created by [alvin0216](https://github.com/alvin0216) , In order to fix some known issues and add more personalized elements, Last but no Least, I have added various security guarantees of the website, making it more cool and easier to use.
+`React Blog`最初是在[alvin0216](https://github.com/alvin0216)创建的[alvin0216/React-Blog] (https://github.com/alvin0216/react-blog)项目的基础上建立的，为了修复一些已知的问题，增加更多的个性化元素，最后但并非最不重要的是，我增加了网站的各种安全保证，使它更酷，更容易使用。
 
 
-In order to build a personal website, you first need to rent a cloud server (centos is generally used instead in this article), and use Alibaba Cloud/Tencent Cloud/AWS to host the website. Or you can use Ngrok to do intranet penetration and deploy the website on your PC.
+为了建立个人网站，首先需要租用云服务器(本文中一般使用centos)，并使用阿里云、腾讯云/AWS来托管网站。或者你可以使用Ngrok进行内部网渗透，并在你的PC上部署网站。
 
 
-## Install
+## 安装
 
-If you want to deploy on the Centos server, you can directly use our one-click installation deployment script:
+如果您想部署在Centos服务器上，您可以直接使用我们的一键式安装部署脚本:
 ```sh
 $ sh install.sh
 ```
-If you want to install and configure yourself, use [node](http://nodejs.org),[npm](https://npmjs.com),[yarn](),[forever]() for this project. Please make sure You have performed the correct installation locally.
+如果您想自己安装和配置，请使用[node](http://nodejs.org),[npm](https://npmjs.com),[yarn](),[forever]() for this project. Please make sure You have performed the correct installation locally.
 
 ```sh
 $ npm install --global yarn
@@ -55,18 +51,18 @@ $ npm install --global forever
 ```
 
 
-## Usage
+## 使用
 
-If you use the one-click installation script mentioned above, please pay attention to whether the port is occupied when starting later:
+如果您使用上述一键式安装脚本，请付费后续启动时注意端口是否被占用:
 
 ```sh
 $ yum install lsof
 $ lsof -i:80
 $ lsof -i:6060
 ```
-If there is port occupation, please end the process or change the port
+如果端口被占用，请结束进程或修改端口
 
-Then execute the following instructions for production deployment
+然后执行生产部署的以下说明
 
 ```sh
 $ cd src
@@ -89,9 +85,9 @@ $ forever start app.js
 
 
 
-## Features and Personal Configuration
+## 功能和个人配置
 
-### Features
+### 特性
 
 - [x] Front Desk: Homepage + List Page + Search Page + Category Page + Tab Page
 - [x] Backstage: article management + user management
@@ -110,9 +106,9 @@ $ forever start app.js
 - [x] Share Link for the admain to manage the visiablity of the private article
 - [ ] Smart Recommendation (Related Recommendation)
 
-### Personalized Configuration
+### 个性化配置
 
-Personalized configuration is configured through ```src/config.js```
+个性化配置文件位置 ```src/config.js```
 
 ```js
 import React from 'react'
@@ -182,9 +178,9 @@ export const ANNOUNCEMENT = {
 }
 
 ```
-### Personalized Information Configuration
+### 个性化信息配置
 
-Personal information is configured through ```src/view/web/about/index.jsx```
+个性化信息配置文件位置 ```src/view/web/about/index.jsx```
 ```js
 import React from 'react'
 
@@ -301,10 +297,10 @@ const MyInfo = () => {
 export default MyInfo
 
 ```
-### Background sensitive information configuration
+### 后台敏感信息配置
 
 
-Sensitive information in the background is configured through ``server\config\index.js``, including the startup port of the background, the configuration of the database, and the configuration of the email notification of comments.
+后台的敏感信息通过``server\config\index.js``进行配置，包括后台的启动端口、数据库的配置、评论邮件通知的配置。
 
 ```js
 const devMode = process.env.NODE_ENV === 'development'
@@ -408,26 +404,8 @@ if (!devMode) {
 }
 
 module.exports = config
-
-
 ```
 
-## Maintainers
+## 维护人员
 
-[@faultaddr](https://github.com/faultaddr)。
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=faultaddr/react-blog&type=Date)](https://star-history.com/#bytebase/star-history&Date)
-
-## Contributing
-
-Feel free to dive in! [open an issue](https://github.com/faultaddr/react-blog/issues/new) or submit PRs.
-
-
-React-blog follows the  [Contributor Covenant](http://contributor-covenant.org/version/1/3/0/) Code of Conduct.
-
-
-## License
-
-[MIT](LICENSE) © Yunyi Pan
+[@蜡笔小开心❤️](https://github.com/514420887wzr)。
