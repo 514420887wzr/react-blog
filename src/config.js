@@ -31,13 +31,9 @@ export const SIDEBAR = {
   },
   friendslink: {
     小伙伴博客: {
-      link: 'http://114.55.67.104',
-      img: 'http://114.55.67.104/favicon.ico',
+      link: 'http://152.136.42.252',
+      img: 'http://152.136.42.252/favicon.ico',
     },
-    // wizchen: {
-    //   link: 'http://blog.wizchen.com',
-    //   img: 'https://cdn.jsdelivr.net/gh/wizcheu/content1@main/img/header.gif'
-    // }
   },
 }
 

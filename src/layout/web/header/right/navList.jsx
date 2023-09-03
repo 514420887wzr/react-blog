@@ -23,9 +23,14 @@ export default [
     link: '/about'
   },
   {
-    icon: <UserOutline style={{ marginRight: 15 }} />,
+    icon: <FolderOutline style={{ marginRight: 15 }} />,
     title: '快捷导航',
     link: '/QuickNavigation'
+  },
+  {
+    icon: <EditOutline style={{ marginRight: 15 }} />,
+    title: '代码编辑器',
+    link: '/codeEditor'
   },
   {
     icon: <MessageOutline style={{ marginRight: 15 }} />,

@@ -17,6 +17,7 @@ export default {
     { path: '/github', component: GITHUB.enable && lazy(() => import('@/components/GithubLogining')) },
     { path: '/about', component: lazy(() => import('@/views/web/about')) },
     { path: '/QuickNavigation', component: lazy(() => import('@/views/web/QuickNavigation')) },
+    { path: '/codeEditor', component: lazy(() => import('@/views/web/CodeEditor')) },
     { path: '/fragment', component: lazy(() => import('@/views/web/fragments')) },
     { path: '*', component: lazy(() => import('@/components/404')) },
   ],

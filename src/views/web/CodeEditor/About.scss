@@ -1,0 +1,68 @@
+.about {
+    display: flex;
+    height: calc(100vh - 80px);
+    width: 100%;
+    .aside {
+        width: 15%;
+        height: 100%;
+        padding: 30px 20px;
+        // background-color: #272822;
+        background: rgba(255, 255, 255, 0.99);
+        box-sizing: border-box;
+        overflow-y: auto;
+
+        .ant-timeline-item-tail {
+            background-color: #35393d;
+        }
+
+        .year {
+            color: #35393d;
+            cursor: pointer;
+        }
+    }
+
+    /* 修改滚动条的宽度和高度 */
+    .aside::-webkit-scrollbar {
+        width: 8px;
+        height: 10px;
+        background-color: rgba(255, 255, 255, 0.99);
+    }
+
+    /* 修改滚动条的形状 */
+    .aside::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: #8e5e10;
+    }
+
+    /* 修改滚动条轨道的形状 */
+    .aside::-webkit-scrollbar-track {
+        border-radius: 5px;
+    }
+
+    .main {
+        width: 85%;
+        display: flex;
+
+        /* 修改滚动条的宽度和高度 */
+        .ace_scrollbar::-webkit-scrollbar {
+            width: 8px;
+            height: 10px;
+            background-color: #35393d;
+        }
+
+        /* 修改滚动条的形状 */
+        .ace_scrollbar::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background-color: #8e5e10;
+        }
+
+        /* 修改滚动条轨道的形状 */
+        .ace_scrollbar::-webkit-scrollbar-track {
+            border-radius: 5px;
+        }
+    }
+
+    .box {
+        height: 1000px;
+    }
+}
