@@ -102,7 +102,7 @@ function UploadModal(props) {
   return (
     <Modal
       width={760}
-      visible={visible}
+      open={visible}
       title='导入文章'
       onOk={handleSubmit}
       onCancel={setFalse}

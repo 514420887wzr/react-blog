@@ -97,7 +97,7 @@ function Article(props) {
               placement='right'
               closable={false}
               onClose={e => setDrawerVisible(false)}
-              visible={drawerVisible}
+              open={drawerVisible}
               getContainer={() => document.querySelector('.app-article')}>
               <div className='right-navigation'>
                 <Navigation content={content} />

@@ -32,8 +32,31 @@ const HeaderLeft = props => {
   function clickSearch(e) {
     e.stopPropagation()
   }
-
+  const onClick = (MenuItem) => {
+    history.push(MenuItem.link)
+  }
   const menu = (
+    <Menu
+      className='header-nav'
+      mode="inline"
+      theme="dark"
+      items={navList}
+      onClick={onClick} // 点击子菜单触发
+    // inlineCollapsed={false}
+    >
+      <SearchOutlined />
+      <Input
+        className='search-input'
+        onClick={clickSearch}
+        value={keyword}
+        onChange={handleChange}
+        onPressEnter={onPressEnter}
+        onBlur={onSubmit}
+      />
+    </Menu>
+  )
+
+  const menu1 = (
     <Menu className='header-nav'>
       {navList.map(nav => (
         <Menu.Item key={nav.link}>
@@ -64,7 +87,7 @@ const HeaderLeft = props => {
       <Dropdown
         overlayClassName='header-dropdown'
         trigger={['click']}
-        overlay={menu}
+        menu={menu}
         getPopupContainer={() => document.querySelector('.app-header .header-left')}>
         <MenuOutlined className='header-dropdown-icon' />
       </Dropdown>

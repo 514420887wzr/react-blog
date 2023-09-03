@@ -71,7 +71,7 @@ function SignModal(props) {
     <Modal
       width={460}
       title={type}
-      visible={visible}
+      open={visible}
       onCancel={e => setVisible(false)}
       footer={null}>
       <Form layout='horizontal' form={form}>

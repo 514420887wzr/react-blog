@@ -1520,18 +1520,17 @@ animated();
         </head>
         <body>
           <h1 aria-label="bouncing">
-            <span style="--i: 0" aria-hidden="true"><span>T</span></span>
-            <span style="--i: 1" aria-hidden="true"><span>W</span></span>
-            <span style="--i: 2" aria-hidden="true"><span>K</span></span>
-            <span style="--i: 3" aria-hidden="true"
-              ><span style="color: red">💖 </span></span
-            >
-            <span style="--i: 3" aria-hidden="true"
-              ><span style="color: red">💖 </span></span
-            >
-            <span style="--i: 0" aria-hidden="true"><span>L</span></span>
-            <span style="--i: 1" aria-hidden="true"><span>J</span></span>
+            <span style="--i: 0" aria-hidden="true"><span>W</span></span>
+            <span style="--i: 1" aria-hidden="true"><span>Z</span></span>
             <span style="--i: 2" aria-hidden="true"><span>R</span></span>
+            <span style="--i: 3" aria-hidden="true"
+              ><span style="color: red">💖 </span></span
+            >
+            <span style="--i: 3" aria-hidden="true"
+              ><span style="color: red">💖 </span></span
+            >
+            <span style="--i: 0" aria-hidden="true"><span>W</span></span>
+            <span style="--i: 1" aria-hidden="true"><span>P</span></span>
           </h1>
         </body>
         <script>
@@ -1603,7 +1602,7 @@ animated();
                 false
               );
             } else {
-              console.log("canvas or addEventListener is unsupported!");
+              // console.log("canvas or addEventListener is unsupported!");
             }
 
             function updateSize() {
@@ -2906,7 +2905,7 @@ animated();
                 false
               );
             } else {
-              console.log("canvas or addEventListener is unsupported!");
+              // console.log("canvas or addEventListener is unsupported!");
             }
 
             function updateSize() {
@@ -3117,7 +3116,7 @@ animated();
             c.addEventListener(
               "touchstart",
               function (event) {
-                console.log(1);
+                // console.log(1);
                 if (event.targetTouches.length == 1) {
                   event.preventDefault(); // 阻止浏览器默认事件，重要
                   var touch = event.targetTouches[0];
@@ -3135,7 +3134,7 @@ animated();
             c.addEventListener(
               "touchmove",
               function (event) {
-                console.log(2);
+                // console.log(2);
                 if (event.targetTouches.length == 1) {
                   event.preventDefault(); // 阻止浏览器默认事件，重要
                   var touch = event.targetTouches[0];
@@ -3154,7 +3153,7 @@ animated();
             c.addEventListener(
               "touchend",
               function (event) {
-                console.log(3);
+                // console.log(3);
                 if (event.targetTouches.length == 1) {
                   event.preventDefault(); // 阻止浏览器默认事件，防止手写的时候拖动屏幕，重要
                   //                  var touch = event.targetTouches[0];
@@ -3265,7 +3264,7 @@ animated();
               ctx.moveTo(0, 0);
               //计算画圆的结束位置
               end = start + (arr[i] / sum) * 2 * Math.PI;
-              console.log('end',end)
+              // console.log('end',end)
               //画圆
               ctx.arc(0, 0, r, start, end);
               ctx.fillStyle = colors[i]; //设置填充颜色
@@ -3325,17 +3324,17 @@ animated();
           const streamPromise = navigator.mediaDevices.getDisplayMedia(); // 请求屏幕捕获
           streamPromise.then((stream) => {
             var recordedChunks = []; // 录制的视频数据
-            console.log(stream);
+            // console.log(stream);
             var options = { mimeType: "video/webm; codecs=vp9" }; // 设置编码格式
             var mediaRecorder = new MediaRecorder(stream, options); // 初始化MediaRecorder实例
             mediaRecorder.ondataavailable = handleDataAvailable; // 设置数据可用（录屏结束）时的回调
             mediaRecorder.start();
 
             function handleDataAvailable(event) {
-              console.log("data-available");
+              // console.log("data-available");
               if (event.data.size > 0) {
                 recordedChunks.push(event.data); // 添加数据，event.data是一个BLOB对象
-                console.log(recordedChunks);
+                // console.log(recordedChunks);
                 download(); // 封装成BLOB对象并下载
               } else {
                 // ...

@@ -43,7 +43,7 @@ const QuickLink = props => {
         placement='right'
         closable={false}
         onClose={e => setDrawerVisible(false)}
-        visible={drawerVisible}
+        open={drawerVisible}
         getContainer={() => document.querySelector('.app-home')}>
         <List list={list} showTitle={false} />
       </Drawer>

@@ -11,7 +11,7 @@ const siderLayout = { xxl: 4, xl: 5, lg: 5, sm: 0, xs: 0 }
 const contentLayout = { xxl: 20, xl: 19, lg: 19, sm: 24, xs: 24 }
 
 const WebLayout = props => {
-  console.log(`props`, props);
+  // console.log(`props`, props);
   const [state, setstate] = useState(['/codeEditor', '/QuickNavigation']);
   return (
     <Layout className='app-container'>

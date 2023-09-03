@@ -1,10 +1,10 @@
 import React from 'react'
-import {Icon} from 'antd'
+import { Icon } from 'antd'
 import SvgIcon from '@/components/SvgIcon'
 
 import Href from '@/components/Href'
 import MyInfo from '@/views/web/about/MyInfo'
-import {GithubFill} from 'utils/antdIcon'
+import { GithubFill } from 'utils/antdIcon'
 // API_BASE_URL
 // export const SERVER_URL = 'http://127.0.0.1'
 export const SERVER_URL = 'http://39.106.132.8'
@@ -53,7 +53,7 @@ export const ABOUT = {
   avatar: SIDEBAR.avatar,
   describe: SIDEBAR.subTitle,
   discuss: true, // 关于页面是否开启讨论
-  renderMyInfo: <MyInfo /> // 我的介绍 自定义组件 => src/views/web/about/MyInfo.jsx
+  renderMyInfo: <MyInfo />, // 我的介绍 自定义组件 => src/views/web/about/MyInfo.jsx
 }
 
 // 公告 announcement
@@ -62,7 +62,12 @@ export const ANNOUNCEMENT = {
   content: (
     <>
       个人笔记网站，请访问
-      <Href href='https://blog.csdn.net/wzr514420887'>蜡笔小开心❤️</Href>
+      <Href href='https://blog.csdn.net/wzr514420887'>
+        蜡笔小开心
+        <span role='img' aria-label='donut'>
+          ❤️
+        </span>
+      </Href>
     </>
   ),
 }

@@ -18,7 +18,7 @@ const configureStore = (initialState = {}) => {
   if (module.hot && process.env.NODE_ENV !== 'production') {
     // Enable Webpack hot module replacement for reducers
     module.hot.accept('./rootReducers', () => {
-      console.log('replacing reducer...')
+      // console.log('replacing reducer...')
       const nextRootReducer = require('./rootReducers').default
       store.replaceReducer(nextRootReducer)
     })
