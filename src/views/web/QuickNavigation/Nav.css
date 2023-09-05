@@ -10,8 +10,8 @@
 .nav .side {
   width: 15%;
   height: 100%;
-  background-color: #080808;
-  color: #f2f2f2;
+  background-color: rgba(255, 255, 255, 0.99);
+  color: #000;
 }
 
 .nav .side ul {
@@ -34,22 +34,22 @@
 }
 
 .nav .side ul li:hover {
-  background-color: #1c88cf;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .nav .side ul .nav-active {
-  background-color: #1c88cf;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .nav .main {
   width: 85%;
   height: 100%;
   overflow-y: auto;
-  background-color: #5f479a;
+  background-color: rgba(255, 255, 255, 0.99);
   padding: 20px;
   box-sizing: border-box;
   font-size: 18px;
-  color: #f2f2f2;
+  color: #000;
 }
 
 .nav .main .pub {
@@ -69,10 +69,10 @@
 
 .nav .main .pub .content ul li {
   margin-right: 20px;
-  border: 1px solid #f2f2f2;
+  border: 1px solid rgba(0, 0, 0, 0.4);
   padding: 5px 10px;
   box-sizing: border-box;
-  background-color: #a59aca;
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 15px;
@@ -87,8 +87,8 @@
   margin-right: 10px;
 }
 
-.nav .main .pub .content ul li a {
-  color: #f2f2f2;
+.nav .main .pub .content ul li span {
+  color: #000;
   font-size: 15px;
 }
 

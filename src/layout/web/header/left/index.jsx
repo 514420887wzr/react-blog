@@ -35,7 +35,7 @@ const HeaderLeft = props => {
   const onClick = (MenuItem) => {
     history.push(MenuItem.link)
   }
-  const menu = (
+  const menu1 = (
     <Menu
       className='header-nav'
       mode="inline"
@@ -56,7 +56,7 @@ const HeaderLeft = props => {
     </Menu>
   )
 
-  const menu1 = (
+  const menu = (
     <Menu className='header-nav'>
       {navList.map(nav => (
         <Menu.Item key={nav.link}>
@@ -87,7 +87,7 @@ const HeaderLeft = props => {
       <Dropdown
         overlayClassName='header-dropdown'
         trigger={['click']}
-        menu={menu}
+        overlay={menu}
         getPopupContainer={() => document.querySelector('.app-header .header-left')}>
         <MenuOutlined className='header-dropdown-icon' />
       </Dropdown>

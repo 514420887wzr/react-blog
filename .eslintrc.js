@@ -1,7 +1,8 @@
+
 module.exports = {
   "extends": ["react-app"],
   "globals": {},
-  "rules": {
+  rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-unused-vars': 'off', // 定义了但是未使用 不报错
@@ -18,6 +19,7 @@ module.exports = {
     'camelcase': [0, {
       'properties': 'always'
     }],
+    'no-const-assign':'off',
     'comma-dangle': 0,
     'comma-spacing': [0],
     'comma-style': [2, 'last'],

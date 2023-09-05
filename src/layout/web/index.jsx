@@ -12,7 +12,7 @@ const contentLayout = { xxl: 20, xl: 19, lg: 19, sm: 24, xs: 24 }
 
 const WebLayout = props => {
   // console.log(`props`, props);
-  const [state, setstate] = useState(['/codeEditor', '/QuickNavigation']);
+  const [state, setstate] = useState(['/codeEditor', '/QuickNavigation','/prettyPictures']);
   return (
     <Layout className='app-container'>
       <ReactCanvasNest className='canvasNest' config={{ pointColor: '255,255,255' }} style={{ zIndex: 1 }} />

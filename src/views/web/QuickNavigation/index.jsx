@@ -542,6 +542,9 @@ export default function Nav() {
     setSelectId(id)
     goAnchor("#" + id)
   }
+  const onClickUrl = (url) => {
+    window.open(url, "_blank");
+  }
   return (
     <div className="nav">
       <div className="side">
@@ -580,11 +583,11 @@ export default function Nav() {
             <div className='content'>
               <ul>
                 {item1.children.map((item2) => (
-                  <li key={item2.id}>
+                  <li key={item2.id} onClick={() => { onClickUrl(item2.url)}}>
                     <img src={item2.icon} alt="" />
-                    <a href={item2.url} target="blank">
+                    <span>
                       {item2.title}
-                    </a>
+                    </span>
                   </li>
                 ))}
               </ul>

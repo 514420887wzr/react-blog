@@ -32,6 +32,7 @@ export { default as MenuOutline } from '@ant-design/icons/lib/icons/MenuOutlined
 export { default as PlusOutline } from '@ant-design/icons/lib/icons/PlusOutlined'
 
 export { default as QqOutline } from '@ant-design/icons/lib/icons/QqOutlined'
+export { default as InstagramOutlined } from '@ant-design/icons/lib/icons/InstagramOutlined'
 
 export { default as ClockCircleOutline } from '@ant-design/icons/lib/icons/ClockCircleOutlined'
 

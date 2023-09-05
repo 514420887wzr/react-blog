@@ -1,5 +1,5 @@
 import React from 'react'
-import { EditOutline, FolderOutline, HomeOutline, MessageOutline, UserOutline } from 'utils/antdIcon'
+import { EditOutline, FolderOutline, HomeOutline, MessageOutline, UserOutline, InstagramOutlined } from 'utils/antdIcon'
 
 export default [
   {
@@ -36,5 +36,10 @@ export default [
     icon: <MessageOutline style={{ marginRight: 15 }} />,
     title: '碎🐡',
     link: '/fragment'
+  },
+  {
+    icon: <InstagramOutlined style={{ marginRight: 15 }} />,
+    title: '美图分享📸',
+    link: '/prettyPictures'
   }
 ]

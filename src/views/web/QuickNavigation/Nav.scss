@@ -5,8 +5,8 @@
     width: 15%;
     height: 100%;
     // overflow-y: auto;
-    background-color: #080808;
-    color: #f2f2f2;
+    background-color: rgba(255, 255, 255, 0.99);
+    color: #000;
     ul {
       height: 100%;
       li {
@@ -23,10 +23,10 @@
         }
       }
       li:hover {
-        background-color: #1c88cf;
+        background-color: rgba(0, 0, 0, 0.2);
       }
       .nav-active {
-        background-color: #1c88cf;
+        background-color: rgba(0, 0, 0, 0.25);
       }
     }
   }
@@ -34,11 +34,11 @@
     width: 85%;
     height: 100%;
     overflow-y: auto;
-    background-color: #5f479a;
+    background-color: rgba(255, 255, 255, 0.99);
     padding: 20px;
     box-sizing: border-box;
     font-size: 18px;
-    color: #f2f2f2;
+    color: #000;
     .pub {
       margin-bottom: 20px;
       .title {
@@ -52,10 +52,10 @@
           flex-wrap: wrap;
           li {
             margin-right: 20px;
-            border: 1px solid #f2f2f2;
+            border: 1px solid rgba(0, 0, 0, 0.4);
             padding: 5px 10px;
             box-sizing: border-box;
-            background-color: #a59aca;
+            background-color: rgba(0, 0, 0, 0.2);
             border-radius: 5px;
             cursor: pointer;
             margin-bottom: 15px;
@@ -67,8 +67,8 @@
                 border-radius: 50%;
                 margin-right: 10px;
             }
-            a {
-              color: #f2f2f2;
+            span {
+              color: #000;
               font-size: 15px;
             }
           }

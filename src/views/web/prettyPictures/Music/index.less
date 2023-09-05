@@ -1,0 +1,73 @@
+.musicBox {
+    display: flex;
+    align-items: center;
+    width: 360px;
+    height: 145px;
+    background-color: #fcf1f0;
+    border-radius: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 20px;
+    z-index: 101;
+}
+
+.musicImage {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    animation: fadenum 60s infinite;
+
+    @keyframes fadenum {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+.musicInfo {
+    width: 195px;
+    margin-right: 10px;
+
+    .musicDesc {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        color: #65567e;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .progressBar {
+        width: 193px;
+        margin-top: 10px;
+
+        .ant-slider {
+            margin: 0;
+            margin-left: 10px;
+        }
+
+        .musicTime {
+            font-size: 13px;
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 4px;
+        }
+    }
+
+    .operationBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .volume {
+            width: 80px;
+        }
+    }
+}

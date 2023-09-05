@@ -19,6 +19,7 @@ export default {
     { path: '/QuickNavigation', component: lazy(() => import('@/views/web/QuickNavigation')) },
     { path: '/codeEditor', component: lazy(() => import('@/views/web/CodeEditor')) },
     { path: '/fragment', component: lazy(() => import('@/views/web/fragments')) },
+    { path: '/prettyPictures', component: lazy(() => import('@/views/web/prettyPictures')) },
     { path: '*', component: lazy(() => import('@/components/404')) },
   ],
 }

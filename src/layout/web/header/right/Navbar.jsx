@@ -24,16 +24,6 @@ function NavBar(props) {
         </Menu.Item>
       ))}
     </Menu>
-    // <Menu
-    //   mode={mode} selectedKeys={[location.pathname]} className='header-nav'
-    //   defaultSelectedKeys={['1']}
-    //   defaultOpenKeys={['sub1']}
-    //   theme="dark"
-    //   items={navList}
-    //   onClick={onClick} // 点击子菜单触发
-    // // inlineCollapsed={false}
-    // >
-    // </Menu>
   )
 }
 
