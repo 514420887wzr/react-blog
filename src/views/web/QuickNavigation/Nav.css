@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .nav {
   display: flex;
-  height: calc(100vh - 64px - 40px);
+  height: calc(100vh - 64px);
   /* 修改滚动条的宽度和高度 */
   /* 修改滚动条的形状 */
   /* 修改滚动条轨道的形状 */

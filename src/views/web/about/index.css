@@ -1,0 +1,8 @@
+.app-about {
+  padding: 40px 20px;
+}
+.app-about .about-list,
+.app-about .about-list ul {
+  list-style: circle;
+  margin-left: 20px;
+}

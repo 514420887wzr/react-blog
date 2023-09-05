@@ -21,6 +21,7 @@ imagesData = (function getImageURL(imagesDataArray) {
     var singleImageData = imagesDataArray[i];
 
     singleImageData.imageURL = require('./images/' + singleImageData.fileName);
+    // singleImageData.imageURL = 'http://39.106.132.8:6060/' + singleImageData.fileName;
 
     imagesDataArray[i] = singleImageData;
   }

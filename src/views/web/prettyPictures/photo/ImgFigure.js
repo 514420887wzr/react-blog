@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+
 /**
  * 相框组件
  */
@@ -12,13 +14,9 @@ class ImgFigure extends React.Component {
   handleClick(e) {
     if (this.props.arrange.isCenter) {
       this.props.inverse()
-      console.log(`正面`)
     } else {
       this.props.center()
-      console.log(`背面`)
     }
-    console.log(`e`, e)
-    console.log(`isInverse`, this.props.arrange.isInverse)
     e.stopPropagation()
     e.preventDefault()
   }
@@ -49,7 +47,11 @@ class ImgFigure extends React.Component {
     return (
       <figure className={imgFigureClassName} style={styleObj} onClick={this.handleClick}>
         {!this.props.arrange.isInverse ? (
-          <img style={{ width: '100%', height: '100%' }} src={this.props.data.imageURL} alt={this.props.data.title} />
+          <LazyLoadImage
+            style={{ width: '100%', height: '100%' }}
+            src={this.props.data.imageURL}
+            alt={this.props.data.title}
+          />
         ) : (
           ''
         )}

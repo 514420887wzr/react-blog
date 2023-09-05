@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .about {
   display: flex;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 64px);
   width: 100%;
   /* 修改滚动条的宽度和高度 */
   /* 修改滚动条的形状 */
