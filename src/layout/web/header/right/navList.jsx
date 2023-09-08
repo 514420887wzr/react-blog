@@ -8,19 +8,9 @@ export default [
     link: '/home'
   },
   {
-    icon: <EditOutline style={{ marginRight: 15 }} />,
-    title: '归档',
-    link: '/archives'
-  },
-  {
-    icon: <FolderOutline style={{ marginRight: 15 }} />,
-    title: '分类',
-    link: '/categories'
-  },
-  {
-    icon: <UserOutline style={{ marginRight: 15 }} />,
-    title: '关于',
-    link: '/about'
+    icon: <InstagramOutlined style={{ marginRight: 15 }} />,
+    title: '美图分享',
+    link: '/prettyPictures'
   },
   {
     icon: <FolderOutline style={{ marginRight: 15 }} />,
@@ -33,13 +23,23 @@ export default [
     link: '/codeEditor'
   },
   {
+    icon: <UserOutline style={{ marginRight: 15 }} />,
+    title: '关于',
+    link: '/about'
+  },
+  {
     icon: <MessageOutline style={{ marginRight: 15 }} />,
     title: '碎🐡',
     link: '/fragment'
   },
   {
-    icon: <InstagramOutlined style={{ marginRight: 15 }} />,
-    title: '美图分享📸',
-    link: '/prettyPictures'
-  }
+    icon: <EditOutline style={{ marginRight: 15 }} />,
+    title: '归档',
+    link: '/archives'
+  },
+  {
+    icon: <FolderOutline style={{ marginRight: 15 }} />,
+    title: '分类',
+    link: '/categories'
+  },
 ]

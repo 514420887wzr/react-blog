@@ -7,20 +7,27 @@ import "vditor/dist/index.css";
 import { translateMarkdown2html } from '@/utils'
 
 function MdEditor(props) {
-  console.log(`props`, props);
   const { value } = props;
   const [vd, setVd] = useState();
+
   useEffect(() => {
     const vditor = new Vditor("vditor", {
       value: props.value,
       after() {
-        vditor.setValue(props.value);
+        if (props.value) {
+          vditor.setValue(props.value);
+        }
         setVd(vditor);
       },
       input: (value) => props.onChange(value),
       cache: { id: 'vditor' },
-      height: '500px',
+      height: '650px',
       counter: { enable: true },
+      placeholder: `快捷编辑（仅支持 PC 端）
+1. Emoji：Ctrl+ E
+2. F11：全屏
+3. Ctrl + V / 拖拽：上传图片
+4. Alt + S / R：开始 / 结束录音`,
       upload: {
         url: 'http://39.106.132.8:6060/uploads/file',
         fieldName: 'file',
@@ -28,7 +35,7 @@ function MdEditor(props) {
         format: (files, responseTxt) => {
           const res = JSON.parse(responseTxt);
           const name = files[0].name;
-          const url = 'http://39.106.132.8:6060/'+res.data.url;
+          const url = 'http://39.106.132.8:6060/' + res.data.url;
           const result = JSON.stringify({ code: 0, data: { errFiles: '', succMap: { [name]: url } } });
           return result;
         },

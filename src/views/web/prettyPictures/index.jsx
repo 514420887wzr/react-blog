@@ -20,7 +20,7 @@ imagesData = (function getImageURL(imagesDataArray) {
   for (var i = 0, j = imagesDataArray.length; i < j; i++) {
     var singleImageData = imagesDataArray[i];
 
-    singleImageData.imageURL = require('./images/' + singleImageData.fileName);
+    singleImageData.imageURL = require('@/assets/prettyImages/' + singleImageData.fileName);
     // singleImageData.imageURL = 'http://39.106.132.8:6060/' + singleImageData.fileName;
 
     imagesDataArray[i] = singleImageData;

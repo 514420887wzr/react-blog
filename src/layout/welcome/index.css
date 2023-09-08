@@ -29,7 +29,7 @@ h1 {
   justify-content: center;
   min-height: '35rem';
   height: 100%;
-  background-image: linear-gradient(to bottom, rgba(255, 168, 76, 0.6) 0%, rgba(255, 123, 13, 0.6) 100%), url(../../assets/images/welcome.jpg);
+  background-image: linear-gradient(to bottom, rgba(255, 168, 76, 0.6) 0%, rgba(255, 123, 13, 0.6) 100%), url(../../assets/images/welcome.jpeg);
   background-blend-mode: soft-light;
   background-size: cover;
   background-position: center center;
@@ -38,107 +38,133 @@ h1 {
 
 @keyframes typed {
   /* string 1, char 1 */
-  0%, 0.88083% {
+  0%,
+  0.88083% {
     content: "欲";
   }
   /* string 1, char 2 */
-  0.88183%, 1.76267% {
+  0.88183%,
+  1.76267% {
     content: "欲买";
   }
   /* string 1, char 3 */
-  1.76367%, 2.6445% {
+  1.76367%,
+  2.6445% {
     content: "欲买桂";
   }
   /* string 1, char 4 */
-  2.6455%, 3.52634% {
+  2.6455%,
+  3.52634% {
     content: "欲买桂花";
   }
   /* string 1, char 5 */
-  3.52734%, 4.40817% {
+  3.52734%,
+  4.40817% {
     content: "欲买桂花同";
   }
   /* string 1, char 6 */
-  4.40917%, 5.29001% {
+  4.40917%,
+  5.29001% {
     content: "欲买桂花同载";
   }
   /* string 1, char 7 */
-  5.29101%, 24.51399% {
+  5.29101%,
+  24.51399% {
     content: "欲买桂花同载酒";
   }
   /* string 1, char 8 */
-  24.51499%, 25.21946% {
+  24.51499%,
+  25.21946% {
     content: "欲买桂花同载";
   }
   /* string 1, char 9 */
-  25.22046%, 25.92493% {
+  25.22046%,
+  25.92493% {
     content: "欲买桂花同";
   }
   /* string 1, char 10 */
-  25.92593%, 26.63039% {
+  25.92593%,
+  26.63039% {
     content: "欲买桂花";
   }
   /* string 1, char 11 */
-  26.63139%, 27.33586% {
+  26.63139%,
+  27.33586% {
     content: "欲买桂";
   }
   /* string 1, char 12 */
-  27.33686%, 28.04133% {
+  27.33686%,
+  28.04133% {
     content: "欲买";
   }
   /* string 1, char 13 */
-  28.04233%, 28.7468% {
+  28.04233%,
+  28.7468% {
     content: "欲";
   }
   /* string 1, char 14 */
-  28.7478%, 37.56514% {
+  28.7478%,
+  37.56514% {
     content: "​";
   }
   /* string 2, char 1 */
-  37.56614%, 38.44697% {
+  37.56614%,
+  38.44697% {
     content: "终";
   }
   /* string 2, char 2 */
-  38.44797%, 39.32881% {
+  38.44797%,
+  39.32881% {
     content: "终不";
   }
   /* string 2, char 3 */
-  39.32981%, 58.55279% {
+  39.32981%,
+  58.55279% {
     content: "终不似";
   }
   /* string 2, char 4 */
-  58.55379%, 59.25826% {
+  58.55379%,
+  59.25826% {
     content: "终不";
   }
   /* string 2, char 5 */
-  59.25926%, 59.96373% {
+  59.25926%,
+  59.96373% {
     content: "终";
   }
   /* string 2, char 6 */
-  59.96473%, 68.78207% {
+  59.96473%,
+  68.78207% {
     content: "​";
   }
   /* string 3, char 1 */
-  68.78307%, 69.6639% {
+  68.78307%,
+  69.6639% {
     content: "少";
   }
   /* string 3, char 2 */
-  69.6649%, 70.54574% {
+  69.6649%,
+  70.54574% {
     content: "少年";
   }
   /* string 3, char 3 */
-  70.54674%, 89.76972% {
+  70.54674%,
+  89.76972% {
     content: "少年游";
   }
   /* string 3, char 4 */
-  89.77072%, 90.47519% {
+  89.77072%,
+  90.47519% {
     content: "少年";
   }
   /* string 3, char 5 */
-  90.47619%, 91.18066% {
+  90.47619%,
+  91.18066% {
     content: "少";
   }
   /* string 3, char 6 */
-  91.18166%, 100% {
+  91.18166%,
+  100% {
     content: "​";
   }
 }

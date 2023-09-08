@@ -46,6 +46,7 @@ function Edit(props) {
       cates[0] && setCateSelectedList([cates[0]])
     }
   }, [store.tagList, store.categoryList])
+  // 实时备份文章
 
   function fetchArticle(id) {
     axios.get(`/article/share/${id}?type=0`).then(res => {
@@ -77,6 +78,7 @@ function Edit(props) {
         top: top
       })
       .then(res => {
+        localStorage.removeItem('vditor')
         Modal.confirm({
           title: '文章创建成功！是否立即查看？',
           onOk: () => props.history.push(`/article/${res.id}`)
@@ -95,6 +97,7 @@ function Edit(props) {
         top: top
       })
       .then(res => {
+        localStorage.removeItem('vditor')
         message.success('更新成功')
       })
   }
@@ -154,7 +157,7 @@ function Edit(props) {
         type='primary'
         shape='circle'
         size='large'
-        disabled={!title}
+        disabled={!title || !content}
         className='action-icon'
         title={editId ? '更新' : '新增'}
         icon={editId ? <CheckCircleFill /> : <CheckCircleOutline />}
