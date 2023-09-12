@@ -34,6 +34,7 @@ const Home = props => {
   return (
     <Spin tip='Loading...' spinning={loading}>
       <div className='app-home'>
+        <a href='https://www.aliyun.com/daily-act/ecs/activity_share?userCode=dvfx8zlo'><img className='advertisimg' src={require('@/assets/advertising/728-90 1.jpg')} alt="" /></a>
         {/* list  */}
         <ArticleList list={list} />
 

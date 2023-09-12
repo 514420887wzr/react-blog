@@ -71,11 +71,11 @@ function Article(props) {
           <h1 className='post-title'>{title}</h1>
 
           <div className='article-desc'>
-            <span className='post-time'>
+            {/* <span className='post-time'>
               <SvgIcon type='iconpost' />
               &nbsp; Posted on &nbsp;
               <span>{createdAt.slice(0, 10)}</span>
-            </span>
+            </span> */}
             <ArticleTag tagList={tags} categoryList={categories} />
             <Divider type='vertical' />
             <a className='comment-count' href='#discuss' style={{ color: 'inherit' }}>

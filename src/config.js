@@ -30,10 +30,10 @@ export const SIDEBAR = {
     },
   },
   friendslink: {
-    小伙伴博客: {
-      link: 'http://152.136.42.252',
-      img: 'http://152.136.42.252/favicon.ico',
-    },
+    // 小伙伴博客: {
+    //   link: 'http://152.136.42.252',
+    //   img: 'http://152.136.42.252/favicon.ico',
+    // },
   },
 }
 

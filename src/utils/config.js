@@ -19,4 +19,4 @@ export const COLOR_LIST = [
 // pageSize
 export const ARCHIVES_PAGESIZE = 15 // archives pageSize
 export const TAG_PAGESIZE = 15 // tag / category pageSize
-export const HOME_PAGESIZE = 10 // home pageSize
+export const HOME_PAGESIZE = 20 // home pageSize

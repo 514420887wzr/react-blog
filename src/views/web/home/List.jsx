@@ -27,7 +27,7 @@ const ArticleList = props => {
               <span className='title' onClick={() => jumpTo(item.id)}>
                 {item.title}
               </span>
-              <span className='posted-time'>{item.createdAt.slice(0, 10)}</span>
+              {/* <span className='posted-time'>{item.createdAt.slice(0, 10)}</span> */}
             </Divider>
 
             <div

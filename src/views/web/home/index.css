@@ -5,6 +5,10 @@
   padding-right: 10px;
   padding-top: 40px;
 }
+.app-home .advertisimg {
+  width: calc(100% - 292px - 20px);
+  height: 100%;
+}
 .app-home .app-home-list {
   width: calc(100% - 292px);
 }

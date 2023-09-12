@@ -17,11 +17,11 @@ export default [
     title: '快捷导航',
     link: '/QuickNavigation'
   },
-  {
-    icon: <EditOutline style={{ marginRight: 15 }} />,
-    title: '代码编辑器',
-    link: '/codeEditor'
-  },
+  // {
+  //   icon: <EditOutline style={{ marginRight: 15 }} />,
+  //   title: '代码编辑器',
+  //   link: '/codeEditor'
+  // },
   {
     icon: <UserOutline style={{ marginRight: 15 }} />,
     title: '关于',
@@ -32,11 +32,11 @@ export default [
     title: '碎🐡',
     link: '/fragment'
   },
-  {
-    icon: <EditOutline style={{ marginRight: 15 }} />,
-    title: '归档',
-    link: '/archives'
-  },
+  // {
+  //   icon: <EditOutline style={{ marginRight: 15 }} />,
+  //   title: '归档',
+  //   link: '/archives'
+  // },
   {
     icon: <FolderOutline style={{ marginRight: 15 }} />,
     title: '分类',

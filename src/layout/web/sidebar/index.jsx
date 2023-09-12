@@ -64,11 +64,12 @@ function SideBar(props) {
       <ul className='tag-list'>
         {Object.entries(SIDEBAR.friendslink).map(([linkName, item]) => (
           <li key={linkName}>
-            <img src={item.img} style={{height: '20px', width: '20px', marginRight: '10px'}} alt={'lizi'}/>
+            <img src={item.img} style={{ height: '20px', width: '20px', marginRight: '10px' }} alt={'lizi'} />
             <Href href={item.link}>{linkName}</Href>
           </li>
         ))}
       </ul>
+      <a href='https://tm.aliyun.com/?userCode=dvfx8zlo'>  <img src={require('@/assets/advertising/282x282.png')} alt="" /></a>
     </aside>
   )
 }
